@@ -16,6 +16,10 @@ const corsOptions = {
 connectDB();
 app.use(cors(corsOptions));
 
+app.get('/',(req,res)=>{
+    res.status(200).json('hello server here');
+})
+
 app.use('/parse-data', router);
 
 

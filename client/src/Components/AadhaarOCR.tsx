@@ -40,7 +40,7 @@ const AadhaarOCR: React.FC = () => {
     formData.append("aadharBack", backFile);
 
     try {
-      const response = await axios.post("http://localhost:4000/parse-data",formData,
+      const response = await axios.post(`${import.meta.env.VITE_BACKEDN_URL}/parse-data`,formData,
         {
             headers: {    
                 'Content-Type': 'multipart/form-data',
